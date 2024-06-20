@@ -31,7 +31,7 @@ with open(filename, "rb") as f:
             data = data + decryptor.update(block)
         else:
             break
-    # throws exception when the tag is wrong
+    # throws an exception when the tag is wrong
     data = data + decryptor.finalize()
 
 print data
